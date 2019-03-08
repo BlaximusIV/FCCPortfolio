@@ -1,5 +1,6 @@
 import React from 'react'
-import marked from 'marked'
+
+const myMarked = require('marked');
 
 class Previewer extends React.Component{
     constructor() {
@@ -18,6 +19,12 @@ class Previewer extends React.Component{
                 '**Here is some bold text**'
         }
 
+        myMarked.setOptions({
+            // renderer: new myMarked.Renderer(),
+            gfm: true,
+            breaks: true
+        })
+
         this.textChanged = this.textChanged.bind(this)
     }
 
@@ -27,16 +34,16 @@ class Previewer extends React.Component{
         })
 
     render = () =>
-        <div id="Previewer">
-            <textarea 
-                id="editor"
-                defaultValue = {this.state.previewText}  
-                onChange = { this.textChanged }/>
-            <div id="preview"
-                contentEditable = {false}>
-                { marked(this.state.previewText) }
+         (
+            <div className="Previewer">
+                <div>
+                    <form>
+                        <textarea id="editor" defaultValue = {this.state.previewText} onChange={this.textChanged} />
+                    </form>
+                </div>
+                <div id="preview" dangerouslySetInnerHTML={{__html: myMarked(this.state.previewText)}} />
             </div>
-        </div>
+        )
 }
 
 export default Previewer;
