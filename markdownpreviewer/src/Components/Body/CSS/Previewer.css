@@ -1,0 +1,26 @@
+
+.Previewer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 60px;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    border: none;
+    background-color: #233237;
+    color: white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#preview {
+    background-color: #EAC67A;
+    border-radius: 1%;
+    border-width: 5px;
+    border-color: black;
+}
