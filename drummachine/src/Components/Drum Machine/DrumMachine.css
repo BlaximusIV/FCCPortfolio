@@ -1,0 +1,47 @@
+:root{
+    --Cerulian: #4484CE;
+    --Aluminum: #D9D9D9;
+    --Light: #F9CF00;
+    --Tangerine:#F19F4D;
+
+    --BorderRadius: 5px;
+
+    --Margin: 1% 1% 1% 1%;
+}
+
+
+#drum-machine{
+    background-color: var(--Aluminum);
+    border-style: solid;
+    border-color: black;
+    border-radius: var(--BorderRadius);
+    box-shadow: 2px 2px 2px 1px #888888;
+    margin: var(--Margin);
+}
+
+#display{
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    background-color: var(--Tangerine);
+    border-style: solid;
+    border-radius: var(--BorderRadius);
+    margin: var(--Margin);
+}
+
+#keyControl{
+    display: grid;
+    grid-template-areas:
+        "item item item"
+        "item item item"
+        "item item item";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    
+}
+
+.drum-pad{
+    grid-area: "item";
+    background-color: var(--Cerulian);
+    margin: var(--Margin);
+    border-radius: var(--BorderRadius);
+}
