@@ -14,13 +14,11 @@ textarea {
     border: none;
     background-color: #233237;
     color: white;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
 }
 
 #preview {
     background-color: #EAC67A;
     border-radius: 1%;
     border-width: 5px;
-    border-color: black;
+    border-color: black; 
 }
